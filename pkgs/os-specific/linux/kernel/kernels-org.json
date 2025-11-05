@@ -34,6 +34,11 @@
         "hash": "sha256:06jlsawz1wgk13gyxphkglb8a4iiwg0vg5hrfc7bj1s6gk1s2p0n",
         "lts": true
     },
+    "6.15": {
+        "version": "6.15.11",
+        "hash": "sha256:14sxwrvw9p4ybizb8ky1rgahc62q0aw5qkmzqp3cpnavqfgldaw9",
+        "lts": false
+    },
     "6.17": {
         "version": "6.17.7",
         "hash": "sha256:03lxl2p8hvi4hdzbf72v3xh8yigr58826dmy6rqxbq9r8h6ymwnx",

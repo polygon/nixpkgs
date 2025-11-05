@@ -195,6 +195,14 @@ in
             kernelPatches.request_key_helper
           ];
         };
+        linux_6_15 = callPackage ../os-specific/linux/kernel/mainline.nix {
+          branch = "6.15";
+          kernelPatches = [
+            kernelPatches.bridge_stp_helper
+            kernelPatches.request_key_helper
+          ];
+        };
+
 
         linux_6_17 = callPackage ../os-specific/linux/kernel/mainline.nix {
           branch = "6.17";
@@ -291,7 +299,6 @@ in
         linux_6_11 = throw "linux 6.11 was removed because it has reached its end of life upstream";
         linux_6_13 = throw "linux 6.13 was removed because it has reached its end of life upstream";
         linux_6_14 = throw "linux 6.14 was removed because it has reached its end of life upstream";
-        linux_6_15 = throw "linux 6.15 was removed because it has reached its end of life upstream";
         linux_6_16 = throw "linux 6.16 was removed because it has reached its end of life upstream";
 
         linux_5_10_hardened = throw "linux_hardened on nixpkgs only contains latest stable and latest LTS";
@@ -306,7 +313,6 @@ in
         linux_6_11_hardened = throw "linux 6.11 was removed because it has reached its end of life upstream";
         linux_6_13_hardened = throw "linux 6.13 was removed because it has reached its end of life upstream";
         linux_6_14_hardened = throw "linux 6.14 was removed because it has reached its end of life upstream";
-        linux_6_15_hardened = throw "linux 6.15 was removed because it has reached its end of life upstream";
 
         linux_rt_5_4 = throw "linux_rt 5.4 has been removed because it will reach its end of life within 25.11";
 
@@ -728,6 +734,7 @@ in
     linux_6_1 = recurseIntoAttrs (packagesFor kernels.linux_6_1);
     linux_6_6 = recurseIntoAttrs (packagesFor kernels.linux_6_6);
     linux_6_12 = recurseIntoAttrs (packagesFor kernels.linux_6_12);
+    linux_6_15 = recurseIntoAttrs (packagesFor kernels.linux_6_15);
     linux_6_17 = recurseIntoAttrs (packagesFor kernels.linux_6_17);
     linux_6_18 = recurseIntoAttrs (packagesFor kernels.linux_6_18);
   }
@@ -739,7 +746,6 @@ in
     linux_6_11 = throw "linux 6.11 was removed because it reached its end of life upstream"; # Added 2025-03-23
     linux_6_13 = throw "linux 6.13 was removed because it reached its end of life upstream"; # Added 2025-06-22
     linux_6_14 = throw "linux 6.14 was removed because it reached its end of life upstream"; # Added 2025-06-22
-    linux_6_15 = throw "linux 6.15 was removed because it reached its end of life upstream"; # Added 2025-08-23
     linux_6_16 = throw "linux 6.16 was removed because it reached its end of life upstream"; # Added 2025-10-22
   };
 

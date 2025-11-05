@@ -887,7 +887,7 @@ mapAliases {
   linux_6_13_hardened = throw "linux 6.13 was removed because it has reached its end of life upstream"; # Added 2025-06-29
   linux_6_14 = throw "linux 6.14 was removed because it has reached its end of life upstream"; # Added 2025-06-29
   linux_6_14_hardened = throw "linux 6.14 was removed because it has reached its end of life upstream"; # Added 2025-06-29
-  linux_6_15 = throw "linux 6.15 was removed because it has reached its end of life upstream"; # Added 2025-08-30
+  linux_6_15 = linuxKernel.kernels.linux_6_15;
   linux_6_16 = throw "linux 6.16 was removed because it has reached its end of life upstream"; # Added 2025-10-22
   linux_6_17 = linuxKernel.kernels.linux_6_17;
   linux_6_18 = linuxKernel.kernels.linux_6_18;
@@ -917,7 +917,7 @@ mapAliases {
   linuxPackages_6_13_hardened = throw "linux 6.13 was removed because it has reached its end of life upstream"; # Added 2025-06-29
   linuxPackages_6_14 = throw "linux 6.14 was removed because it has reached its end of life upstream"; # Added 2025-06-29
   linuxPackages_6_14_hardened = throw "linux 6.14 was removed because it has reached its end of life upstream"; # Added 2025-06-29
-  linuxPackages_6_15 = throw "linux 6.15 was removed because it has reached its end of life upstream"; # Added 2025-08-30
+  linuxPackages_6_15 = linuxKernel.packages.linux_6_15;
   linuxPackages_6_16 = throw "linux 6.16 was removed because it has reached its end of life upstream"; # Added 2025-10-22
   linuxPackages_6_17 = linuxKernel.packages.linux_6_17;
   linuxPackages_6_18 = linuxKernel.packages.linux_6_18;
